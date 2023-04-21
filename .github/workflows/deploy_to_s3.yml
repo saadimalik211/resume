@@ -22,4 +22,4 @@ jobs:
 
     - name: Deploy to S3
       run: |
-        aws s3 sync ./ s3://saadmalikresume/ --acl public-read --delete
+        aws s3 sync ./ s3://saadmalikresume/ --acl public-read --delete --exclude '.git/*' --exclude '.github/*'
