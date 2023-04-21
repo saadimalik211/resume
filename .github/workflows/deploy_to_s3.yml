@@ -1,4 +1,4 @@
-name: Deploy to S3 and Lambda
+name: Deploy to S3 and Backend
 
 on:
   push:
@@ -6,33 +6,57 @@ on:
       - main
 
 jobs:
-  deploy:
+  deploy-frontend:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+    - name: Set up AWS CLI
+      uses: aws-actions/configure-aws-credentials@v1
       with:
-        python-version: 3.8
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1 # Replace with your preferred AWS region
+
+    - name: Deploy to S3
+      run: |
+        aws s3 cp ./frontend/index.html s3://saadmalikresume/index.html
+        aws s3 cp ./frontend/styles.css s3://saadmalikresume/styles.css
+
+  deploy-backend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
     - name: Set up AWS CLI
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+        aws-region: us-east-1 # Replace with your preferred AWS region
 
-    - name: Deploy frontend to S3
+    - name: Install dependencies
       run: |
-        cd frontend
-        aws s3 sync ./ s3://saadmalikresume/ --delete --exclude '.git/*' --exclude '.github/*'
+        sudo apt-get update
+        sudo apt-get install -y python3.8-venv
 
-    - name: Deploy backend using SAM
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install SAM CLI
       run: |
-        cd backend
-        pip install aws-sam-cli
-        sam build
-        sam deploy --guided
+        pip install --user --upgrade aws-sam-cli
+
+    - name: Build Backend
+      run: |
+        ~/.local/bin/sam build
+
+    - name: Deploy Backend
+      run: |
+        ~/.local/bin/sam deploy --stack-name visitor-counter-backend --region us-east-1 --capabilities CAPABILITY_IAM --no-confirm-changeset
