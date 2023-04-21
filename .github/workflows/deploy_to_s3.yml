@@ -24,11 +24,10 @@ jobs:
       run: |
         aws s3 cp ./frontend/index.html s3://saadmalikresume/index.html
         aws s3 cp ./frontend/styles.css s3://saadmalikresume/styles.css
-
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: 3.10
 
     - name: Install dependencies
       run: |
@@ -36,12 +35,11 @@ jobs:
         sudo apt-get install software-properties-common
         sudo add-apt-repository ppa:deadsnakes/ppa
         sudo apt-get update
-        sudo apt-get install python3.8 python3.8-venv python3.8-distutils
-        python3.8 -m venv venv
+        sudo apt-get install python3.10 python3.10-venv python3.10-distutils
+        python3.10 -m venv venv
         source venv/bin/activate
         pip install --upgrade pip
         pip install aws-sam-cli
-
     - name: Build and Deploy Backend
       run: |
         cd backend
