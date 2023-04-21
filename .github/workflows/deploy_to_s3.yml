@@ -1,4 +1,4 @@
-name: Deploy to S3 and Backend
+name: Deploy to S3
 
 on:
   push:
@@ -18,12 +18,12 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1 # Replace with your preferred AWS region
+        aws-region: us-east-1
 
-    - name: Deploy to S3
+    - name: Deploy Frontend to S3
       run: |
-        aws s3 cp ./frontend/index.html s3://saadmalikresume/index.html
-        aws s3 cp ./frontend/styles.css s3://saadmalikresume/styles.css
+        aws s3 cp ./frontend/index.html s3://saadmalikresume/index.html --exclude '.git/*' --exclude '.github/*'
+        aws s3 cp ./frontend/styles.css s3://saadmalikresume/styles.css --exclude '.git/*' --exclude '.github/*'
 
   deploy-backend:
     runs-on: ubuntu-latest
@@ -32,15 +32,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up AWS CLI
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1 # Replace with your preferred AWS region
-
     - name: Install dependencies
       run: |
+        sudo apt-get update
+        sudo add-apt-repository ppa:deadsnakes/ppa
         sudo apt-get update
         sudo apt-get install -y python3.8-venv
 
@@ -51,12 +46,10 @@ jobs:
 
     - name: Install SAM CLI
       run: |
-        pip install --user --upgrade aws-sam-cli
+        pip install aws-sam-cli
 
-    - name: Build Backend
+    - name: Build and Deploy Backend
       run: |
-        ~/.local/bin/sam build
-
-    - name: Deploy Backend
-      run: |
-        ~/.local/bin/sam deploy --stack-name visitor-counter-backend --region us-east-1 --capabilities CAPABILITY_IAM --no-confirm-changeset
+        cd backend
+        sam build
+        sam deploy --stack-name resume-visitor-counter --capabilities CAPABILITY_IAM --no-confirm-changeset
