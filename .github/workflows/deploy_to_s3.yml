@@ -1,4 +1,4 @@
-name: Deploy to S3
+name: Deploy to S3 and Lambda
 
 on:
   push:
@@ -18,8 +18,16 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1 # Replace with your preferred AWS region
+        aws-region: us-east-1
 
-    - name: Deploy to S3
+    - name: Deploy frontend to S3
       run: |
+        cd frontend
         aws s3 sync ./ s3://saadmalikresume/ --delete --exclude '.git/*' --exclude '.github/*'
+
+    - name: Deploy backend using SAM
+      run: |
+        cd backend
+        pip install aws-sam-cli
+        sam build
+        sam deploy --guided
