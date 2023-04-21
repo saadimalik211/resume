@@ -52,5 +52,5 @@ jobs:
       run: |
         cd backend
         sam build
-        sam deploy --stack-name resume-visitor-counter --capabilities CAPABILITY_IAM --no-confirm-changeset --region us-east-1
+        sam deploy --stack-name resume-visitor-counter --capabilities CAPABILITY_IAM --no-confirm-changeset --region us-east-1 --s3-bucket saadmalikresume
 
