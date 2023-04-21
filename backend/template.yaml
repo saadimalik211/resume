@@ -1,26 +1,37 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: A simple serverless visitor counter application.
+Description: Simple backend for counting visitors
 
 Resources:
-  UpdateVisitorCountFunction:
+  VisitorCounterFunction:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: updateVisitorCount
-      CodeUri: backend/
-      Handler: app.lambda_handler
+      CodeUri: .
+      Handler: lambda_function.lambda_handler
       Runtime: python3.8
-      Environment:
-        Variables:
-          TABLE_NAME: ResumeVisitorCount
       Events:
-        ResumeVisitorCountAPI:
+        VisitorCount:
           Type: Api
           Properties:
             Path: /count
             Method: GET
+            RestApiId: !Ref VisitorCounterApi
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - 'dynamodb:UpdateItem'
+                - 'dynamodb:GetItem'
+              Resource: !GetAtt ResumeVisitorCount.Arn
 
-  ResumeVisitorCountDynamoDBTable:
+  VisitorCounterApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+
+  ResumeVisitorCount:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: ResumeVisitorCount
