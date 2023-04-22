@@ -17,52 +17,29 @@ Resources:
         Count:
           Type: HttpApi
           Properties:
+            ApiId: !Ref ResumeVisitorCountAPI
             Path: /count
             Method: GET
-            ApiId: !Ref ResumeVisitorCountAPI
       Environment:
         Variables:
           TABLE_NAME: ResumeVisitorCount
-      Role: !GetAtt LambdaExecutionRole.Arn
 
   ResumeVisitorCountAPI:
     Type: AWS::Serverless::HttpApi
     Properties:
       ApiId: d7tqrxj7v4
-      CorsConfiguration:
-        AllowMethods:
-          - GET
-        AllowHeaders:
-          - Content-Type
-          - X-Amz-Date
-          - Authorization
-          - X-Api-Key
-          - X-Amz-Security-Token
-          - X-Amz-User-Agent
-        AllowOrigins:
-          - '*'
 
-  LambdaExecutionRole:
-    Type: AWS::IAM::Role
+  ResumeVisitorCountTablePermission:
+    Type: AWS::IAM::Policy
     Properties:
-      AssumeRolePolicyDocument:
+      PolicyName: ResumeVisitorCountTablePermission
+      Roles:
+        - !Ref VisitorCounterFunctionRole
+      PolicyDocument:
         Version: '2012-10-17'
         Statement:
           - Effect: Allow
-            Principal:
-              Service:
-                - lambda.amazonaws.com
-            Action: sts:AssumeRole
-      ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
-      Policies:
-        - PolicyName: DynamoDBAccessPolicy
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action:
-                  - dynamodb:GetItem
-                  - dynamodb:PutItem
-                  - dynamodb:UpdateItem
-                Resource: !Sub "arn:aws:dynamodb:us-east-1:${AWS::AccountId}:table/ResumeVisitorCount"
+            Action:
+              - dynamodb:GetItem
+              - dynamodb:UpdateItem
+            Resource: !Sub "arn:aws:dynamodb:us-east-1:${AWS::AccountId}:table/ResumeVisitorCount"
