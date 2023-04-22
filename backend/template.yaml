@@ -17,17 +17,12 @@ Resources:
         Count:
           Type: HttpApi
           Properties:
-            ApiId: !Ref ResumeVisitorCountAPI
+            ApiId: d7tqrxj7v4
             Path: /count
             Method: GET
       Environment:
         Variables:
           TABLE_NAME: ResumeVisitorCount
-
-  ResumeVisitorCountAPI:
-    Type: AWS::Serverless::HttpApi
-    Properties:
-      ApiId: d7tqrxj7v4
 
   ResumeVisitorCountTablePermission:
     Type: AWS::IAM::Policy
