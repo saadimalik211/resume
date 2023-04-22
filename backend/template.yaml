@@ -13,13 +13,6 @@ Resources:
       CodeUri: .
       Handler: lambda_function.lambda_handler
       Runtime: python3.8
-      Events:
-        Count:
-          Type: HttpApi
-          Properties:
-            ApiId: d7tqrxj7v4
-            Path: /count
-            Method: GET
       Environment:
         Variables:
           TABLE_NAME: ResumeVisitorCount
