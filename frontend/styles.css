@@ -40,10 +40,13 @@ nav a {
 .content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #e6e6e6;
 }
+
 
 .content > div:not(:first-child) {
   margin-top: 20px;
