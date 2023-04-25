@@ -39,14 +39,20 @@ nav a {
 
 .content {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #e6e6e6;
 }
 
-.content > div:not(:first-child) {
-  margin-top: 20px;
+#main {
+  flex: 1;
+  padding: 20px;
+}
+
+#sidebar {
+  flex: 1;
+  padding: 20px;
 }
 
 h2 {
@@ -68,6 +74,8 @@ img.profile-pic {
   max-width: 100%;
   border-radius: 50%;
   margin-bottom: 20px;
+  float: left;
+  margin-right: 20px;
 }
 
 footer {
@@ -76,4 +84,15 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 20px;
+}
+
+.section-iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: none;
+}
+
+.section-iframe::-webkit-scrollbar {
+  display: none;
 }
