@@ -19,31 +19,23 @@
       }
     }
 
-    document.addEventListener('DOMContentLoaded', fetchVisitorCount);
-
-    function resizeIframe(iframe) {
-      iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
-    }
-
-    function resizeIframes() {
-      var iframes = document.querySelectorAll("iframe");
-      for (var i = 0; i < iframes.length; i++) {
-        if (iframes[i].contentWindow.document.body) {
-          resizeIframe(iframes[i]);
+    function loadSectionContent(sectionId, fileName) {
+      const xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          document.getElementById(sectionId).innerHTML = xhr.responseText;
         }
-      }
+      };
+      xhr.open("GET", fileName, true);
+      xhr.send();
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      var iframes = document.querySelectorAll("iframe");
-      for (var i = 0; i < iframes.length; i++) {
-        iframes[i].addEventListener("load", resizeIframes);
-      }
-      resizeIframes();
-    });
-
-    window.addEventListener('load', () => {
-      resizeIframes();
+      fetchVisitorCount();
+      loadSectionContent("experience-content", "experience.html");
+      loadSectionContent("education-content", "education.html");
+      loadSectionContent("skills-content", "skills.html");
+      loadSectionContent("contact-content", "contact.html");
     });
   </script>
 </head>
@@ -61,10 +53,10 @@
   </header>
 
   <div class="container content">
-    <iframe src="experience.html" frameborder="0" class="iframe-section" onload="resizeIframes()"></iframe>
-    <iframe src="education.html" frameborder="0" class="iframe-section" onload="resizeIframes()"></iframe>
-    <iframe src="skills.html" frameborder="0" class="iframe-section" onload="resizeIframes()"></iframe>
-    <iframe src="contact.html" frameborder="0" class="iframe-section" onload="resizeIframes()"></iframe>
+    <div id="experience-content"></div>
+    <div id="education-content"></div>
+    <div id="skills-content"></div>
+    <div id="contact-content"></div>
   </div>
 
   <footer>
