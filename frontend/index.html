@@ -19,6 +19,17 @@
     }
 
     document.addEventListener('DOMContentLoaded', fetchVisitorCount);
+
+    function resizeIframes() {
+      const iframes = document.getElementsByClassName('iframe-section');
+      for (let i = 0; i < iframes.length; i++) {
+        iframes[i].style.height = iframes[i].contentWindow.document.body.scrollHeight + 'px';
+      }
+    }
+
+    window.addEventListener('load', () => {
+      resizeIframes();
+    });
   </script>
 </head>
 <body>
@@ -35,10 +46,10 @@
   </header>
 
   <div class="container content">
-    <iframe src="experience.html" frameborder="0" class="iframe-section"></iframe>
-    <iframe src="education.html" frameborder="0" class="iframe-section"></iframe>
-    <iframe src="skills.html" frameborder="0" class="iframe-section"></iframe>
-    <iframe src="contact.html" frameborder="0" class="iframe-section"></iframe>
+    <iframe src="experience.html" frameborder="0" class="iframe-section" onload="resizeIframes()"></iframe>
+    <iframe src="education.html" frameborder="0" class="iframe-section" onload="resizeIframes()"></iframe>
+    <iframe src="skills.html" frameborder="0" class="iframe-section" onload="resizeIframes()"></iframe>
+    <iframe src="contact.html" frameborder="0" class="iframe-section" onload="resizeIframes()"></iframe>
   </div>
 
   <footer>
