@@ -84,3 +84,11 @@ footer {
   padding: 20px;
   margin-top: 20px;
 }
+
+/* Add this code for responsive iframes */
+iframe {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: none;
+}
