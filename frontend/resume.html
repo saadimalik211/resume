@@ -1,89 +1,31 @@
-<div id="resume">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    async function loadSectionContent(url, targetElementId) {
+      try {
+        const response = await fetch(url);
+        const text = await response.text();
+        document.getElementById(targetElementId).innerHTML = text;
+      } catch (error) {
+        console.error(`Error loading ${url}:`, error);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="resume">
     <h1 class="section-header">Resume</h1>
-      <h2 class="section-subheader">Education</h2>
-      <p>Corning Community College - 2012 - A.S Computer Science</p>
-    </div>
-    <div id="work-history">
-        <h2 class="section-subheader">Work History</h2>
-      <ul>
-        <li>
-          <strong>Company:</strong> CognitOps<br>
-          <strong>Duration:</strong> Feb 2022 - Feb 2023<br>
-          <strong>Location:</strong> Remote<br>
-          <strong>Role:</strong> Implementation Engineer<br>
-          <strong>Responsibilities:</strong>
-          <ul>
-            <li>Conducted in-depth reviews of enterprise warehouse Oracle SQL databases to identify key data points to be integrated into CognitOps software.</li>
-            <li>Collaborated with clients to develop customized workflows for their enterprise warehouse labor, identifying and addressing pain points along the way.</li>
-            <li>Created highly complex SQL queries to extract and format client data as required by the CognitOps development and data science teams.</li>
-            <li>Deployed CognitOps software on hybrid architectures to facilitate SQL query execution from warehouses and delivery of data to Google Cloud Services.</li>
-            <li>Configured CognitOps software to establish client workflows and other settings using YAML, JSON, and Scala.</li>
-            <li>Collaborated closely with the CognitOps development team to streamline implementation time frames, reducing from 12+ months to 45 days.</li>
-            <li>Used Jira to track progress with Github integration for code maintenance and review.</li>
-        </ul>
-        </li>
-        <li>
-          <strong>Company:</strong> Rochester Software Associates<br>
-          <strong>Duration:</strong> Sep 2016 - Feb 2022<br>
-          <strong>Location:</strong> Remote<br>
-          <strong>Role:</strong> Technical Analyst<br>
-          <strong>Responsibilities:</strong>
-          <<ul>
-            <li>Managed new customer implementation projects, receiving them from sales team. Generally managed 6-10 at once and consistently worked with more complex and/or high need customers.</li>
-            <li>Monitored help desk queue and assist with tickets. Typically 50+ tickets per month, across dozens of customers.</li>
-            <li>Escalated any serious issues to development, with documentation, collection of log files, etc.</li>
-            <li>Installation and configuration of RSA software on both customer provided Linux VMs, Cent OS & RHEL, as well as RSA cloud hosted VMs in AWS and a local hosting provider.</li>
-            <li>Configuration of SSO integration with customers, using Shibboleth to connect to various customer solutions (Azure, Shibboleth, Ping-ID, etc.)</li>
-            <li>Documented many basic and advanced processes in MediaWiki, and trained new team members until switching to fully remote.</li>
-          </ul>>
-        </li>
-        <li>
-          <strong>Company:</strong> Corning Inc<br>
-          <strong>Duration:</strong> Mar 2018 - Aug 2018<br>
-          <strong>Location:</strong> Corning<br>
-          <strong>Role:</strong> Automation Controls Engineer<br>
-          <strong>Responsibilities:</strong>
-          <ul>
-            <li>Designed monitoring systems for commercial truck emissions systems to collect test data from experimental catalytic converters.</li>
-            <li>Installed all required parts of monitoring system - power, sensors into exhaust, cabling, central processing box, etc., into commercial semi trucks.</li>
-            <li>Collected data from OEM and custom sensors on truck, along with GPS, speed, etc., provided it back to researchers in real time.</li>
-            <li>Full-size trailer version for in-depth data collection worked on in parallel. Truck exhaust is routed through trailer, where many more instruments are hooked up as well as multiple servers configured to handle data.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Company:</strong> ColoCrossing Inc<br>
-          <strong>Duration:</strong> 2014 - 2015<br>
-          <strong>Location:</strong> Buffalo, NY<br>
-          <strong>Role:</strong> Datacenter Systems Engineer<br>
-          <strong>Responsibilities:</strong>
-          <ul>
-            <li>Provided break-fix support for servers located in data centers.</li>
-            <li>Diagnosed hundreds of bad PSUs, RAM, or hard drives. Once diagnosed, replaced faulty part.</li>
-            <li>Assembled and racked dozens of cabinets of servers, along with running and cutting/fitting network cables.</li>
-            <li>Responded to customer tickets within SLA guidelines, communicating with them to work to resolution.</li>
-            <li>Typically 10+ tickets per day.</li>
-            <li>Prioritized, organized, and coordinated with team on shared issues.</li>
-            <li>Escalated issues when required to proper department/resources. Typically 2-3 per day.</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div id="skills">
-      <h2 class="section-subheader">Skills</h2>
-      <ul class="skills-list">
-        <li>Linux server/VM environments</li>
-        <li>Customer/Helpdesk Service</li>
-        <li>Project Management</li>
-        <li>GCS</li>
-        <li>AWS</li>
-        <li>CI/CD</li>
-        <li>SQL</li>
-        <li>Docker</li>
-        <li>Bash</li>
-        <li>Git</li>
-        <li>C / C++</li>
-        <li>Jira</li>
-      </ul>
-    </div>
-    
-</div>
+    <div id="education-section"></div>
+    <div id="experience-section"></div>
+    <div id="skills-section"></div>
+  </div>
+  <script>
+    loadSectionContent('education.html', 'education-section');
+    loadSectionContent('experience.html', 'experience-section');
+    loadSectionContent('skills.html', 'skills-section');
+  </script>
+</body>
+</html>
