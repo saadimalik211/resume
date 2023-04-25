@@ -47,7 +47,6 @@ nav a {
   border: 1px solid #e6e6e6;
 }
 
-
 .content > div:not(:first-child) {
   margin-top: 20px;
 }
@@ -79,4 +78,10 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 20px;
+}
+
+#contact-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
