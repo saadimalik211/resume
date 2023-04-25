@@ -52,12 +52,14 @@ nav a {
 h2 {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 10px;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  text-align: center;
 }
 
 ul li {
@@ -67,7 +69,8 @@ ul li {
 img.profile-pic {
   max-width: 10%;
   border-radius: 5%;
-  margin-bottom: 20px;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 footer {
