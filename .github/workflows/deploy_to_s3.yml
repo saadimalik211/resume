@@ -28,6 +28,10 @@ jobs:
           aws s3 cp ./frontend/skills.html s3://saadmalikresume/skills.html
           aws s3 cp ./frontend/contact.html s3://saadmalikresume/contact.html
 
+      - name: Invalidate CloudFront Cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id E11LQ4C96BKYNW --paths "/*"
+
 
 #  deploy_backend:
 #    runs-on: ubuntu-latest
