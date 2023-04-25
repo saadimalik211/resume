@@ -27,6 +27,7 @@ jobs:
           aws s3 cp ./frontend/education.html s3://saadmalikresume/education.html
           aws s3 cp ./frontend/skills.html s3://saadmalikresume/skills.html
           aws s3 cp ./frontend/contact.html s3://saadmalikresume/contact.html
+          aws s3 cp ./frontend/contact.html s3://saadmalikresume/favicon.ico
 
       - name: Invalidate CloudFront Cache
         run: |
