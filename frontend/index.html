@@ -32,10 +32,8 @@
 
     document.addEventListener("DOMContentLoaded", function () {
       fetchVisitorCount();
-      loadSectionContent("experience-content", "experience.html");
-      loadSectionContent("education-content", "education.html");
-      loadSectionContent("skills-content", "skills.html");
       loadSectionContent("about-content", "about.html");
+      loadSectionContent("resume-content", "resume.html");
       loadSectionContent("contact-content", "contact.html");
     });
   </script>
@@ -45,21 +43,16 @@
     <div class="container">
       <h1>Your Name</h1>
       <nav>
-        <a href="#resume">Resume</a>
         <a href="#about">About</a>
+        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <div class="container content">
-    <div id="resume">
-      <h2>Resume</h2>
-      <div id="experience-content"></div>
-      <div id="education-content"></div>
-      <div id="skills-content"></div>
-    </div>
     <div id="about-content"></div>
+    <div id="resume-content"></div>
     <div id="contact-content"></div>
   </div>
 
