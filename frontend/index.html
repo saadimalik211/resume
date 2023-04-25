@@ -30,18 +30,6 @@
       xhr.send();
     }
 
-    function toggleMenu() {
-  const navLinks = document.querySelectorAll(".nav-link");
-  for (const link of navLinks) {
-    if (link.style.display === "block") {
-      link.style.display = "none";
-    } else {
-      link.style.display = "block";
-    }
-  }
-}
-
-
     document.addEventListener("DOMContentLoaded", function () {
       fetchVisitorCount();
       loadSectionContent("about-content", "about.html");
@@ -55,7 +43,6 @@
     <div class="container">
       <h1>Your Name</h1>
       <nav>
-        <a href="#" class="mobile-menu" onclick="toggleMenu()">&#9776;</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#resume" class="nav-link">Resume</a>
         <a href="#contact" class="nav-link">Contact</a>

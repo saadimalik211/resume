@@ -98,11 +98,6 @@ footer {
   }
 
   nav a {
-    display: none;
-  }
-
-  nav a.mobile-menu {
-    display: block;
-    font-size: 24px;
+    display: block; /* Change this line */
   }
 }
