@@ -23,6 +23,11 @@ jobs:
         run: |
           aws s3 cp ./frontend/index.html s3://saadmalikresume/index.html
           aws s3 cp ./frontend/styles.css s3://saadmalikresume/styles.css
+          aws s3 cp ./frontend/experience.html s3://saadmalikresume/experience.html
+          aws s3 cp ./frontend/education.html s3://saadmalikresume/education.html
+          aws s3 cp ./frontend/skills.html s3://saadmalikresume/skills.html
+          aws s3 cp ./frontend/contact.html s3://saadmalikresume/contact.html
+
 
 #  deploy_backend:
 #    runs-on: ubuntu-latest
