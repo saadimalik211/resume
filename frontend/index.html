@@ -21,11 +21,16 @@
     document.addEventListener('DOMContentLoaded', fetchVisitorCount);
 
     function resizeIframes() {
-      const iframes = document.getElementsByClassName('iframe-section');
-      for (let i = 0; i < iframes.length; i++) {
+  const iframes = document.getElementsByClassName('iframe-section');
+  for (let i = 0; i < iframes.length; i++) {
+    iframes[i].addEventListener('load', () => {
+      if (iframes[i].contentWindow.document.body) {
         iframes[i].style.height = iframes[i].contentWindow.document.body.scrollHeight + 'px';
       }
-    }
+    });
+  }
+}
+
 
     window.addEventListener('load', () => {
       resizeIframes();
