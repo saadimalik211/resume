@@ -19,6 +19,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      - name: Delete bucket contents
+        run: |
+          aws s3 rm s3://saadmalikresume/ --recursive
+
       - name: Deploy to S3
         run: |
           aws s3 cp ./frontend/index.html s3://saadmalikresume/index.html
@@ -27,11 +31,12 @@ jobs:
           aws s3 cp ./frontend/education.html s3://saadmalikresume/education.html
           aws s3 cp ./frontend/skills.html s3://saadmalikresume/skills.html
           aws s3 cp ./frontend/contact.html s3://saadmalikresume/contact.html
-          aws s3 cp ./frontend/contact.html s3://saadmalikresume/favicon.ico
+          aws s3 cp ./frontend/favicon.png s3://saadmalikresume/favicon.png
 
       - name: Invalidate CloudFront Cache
         run: |
           aws cloudfront create-invalidation --distribution-id E11LQ4C96BKYNW --paths "/*"
+
 
 
 #  deploy_backend:
