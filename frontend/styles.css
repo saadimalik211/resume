@@ -49,25 +49,18 @@ nav a {
   margin-top: 20px;
 }
 
-h1.section-header {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-h2.section-subheader {
+.section-header {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
 }
 
-h3 {
+.section-subheader {
   font-size: 22px;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 10px;
-  margin-top: 10px;
 }
 
 h4 {
