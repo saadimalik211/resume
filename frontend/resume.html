@@ -18,9 +18,13 @@
 <body>
   <div id="resume">
     <h1 class="section-header">Resume</h1>
-    <div id="education-section"></div>
-    <div id="experience-section"></div>
-    <div id="skills-section"></div>
+    <div class="resume-columns">
+      <div id="experience-section"></div>
+      <div class="right-column">
+        <div id="skills-section"></div>
+        <div id="education-section"></div>
+      </div>
+    </div>
   </div>
   <script>
     loadSectionContent('education.html', 'education-section');
