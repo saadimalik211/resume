@@ -173,6 +173,8 @@ footer {
 }
 
 .experience-job-entry {
+  width: 500px;
+  height: 400px;
   background-color: #f4f4f4;
   border-radius: 5px;
   padding: 15px;
