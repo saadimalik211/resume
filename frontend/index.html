@@ -7,6 +7,8 @@
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
   <script>
+    let resumeContentLoaded = false;
+
     async function fetchVisitorCount() {
       try {
         const response = await fetch('https://d7tqrxj7v4.execute-api.us-east-1.amazonaws.com/count');
@@ -31,6 +33,13 @@
     }
 
     function showSection(sectionId) {
+      if (sectionId === "resume-content" && !resumeContentLoaded) {
+        loadSectionContent("education-section", "education.html");
+        loadSectionContent("experience-section", "experience.html");
+        loadSectionContent("skills-section", "skills.html");
+        resumeContentLoaded = true;
+      }
+
       const sections = document.getElementsByClassName('section-content');
       for (let i = 0; i < sections.length; i++) {
         sections[i].classList.remove('active');
@@ -41,7 +50,6 @@
     document.addEventListener("DOMContentLoaded", function () {
       fetchVisitorCount();
       loadSectionContent("about-content", "about.html");
-      loadSectionContent("resume-content", "resume.html");
       loadSectionContent("contact-content", "contact.html");
 
       // Show the 'About' section by default
