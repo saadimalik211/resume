@@ -181,6 +181,23 @@ footer {
   margin-bottom: 15px;
 }
 
+.job-details {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.job-title:hover + .job-details,
+.job-details:hover {
+  display: block;
+}
+
 .skills-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
