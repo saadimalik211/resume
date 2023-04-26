@@ -47,6 +47,11 @@
       document.getElementById(sectionId).classList.add('active');
     }
 
+    function navigate(event, sectionId) {
+      event.preventDefault();
+      showSection(sectionId);
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
       fetchVisitorCount();
       loadSectionContent("about-content", "about.html");
@@ -55,12 +60,15 @@
 
       // Show the 'Resume' section by default
       showSection("resume-content");
-    });
 
-    function navigate(event, sectionId) {
-      event.preventDefault();
-      showSection(sectionId);
-    }
+      // Add the hover functionality for experience-job-entry elements
+      const experienceJobEntries = document.querySelectorAll(".experience-job-entry");
+      experienceJobEntries.forEach((entry) => {
+        entry.addEventListener("touchstart", function() {
+          this.classList.toggle("show-job-details");
+        });
+      });
+    });
   </script>
 </head>
 <body>
