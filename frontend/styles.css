@@ -118,28 +118,6 @@ footer {
   margin-top: 20px;
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 768px) {
-  header {
-    height: auto;
-    padding: 10px;
-  }
-
-  header h1 {
-    font-size: 32px;
-  }
-
-  nav {
-    float: none;
-    position: relative;
-  }
-
-  nav a {
-    display: block;
-  }
-
-}
-
 /* New styles added */
 .section-content {
   display: none;
@@ -158,18 +136,6 @@ footer {
 .right-column {
   flex: 1;
   padding-left: 20px;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .resume-columns {
-    flex-direction: column;
-  }
-
-  .right-column {
-    padding-left: 0;
-    margin-top: 20px;
-  }
 }
 
 .experience-job-entry {
@@ -207,4 +173,34 @@ footer {
   border-radius: 5px;
   padding: 15px;
   text-align: center;
+}
+
+/* Mobile and Responsive Styles */
+@media only screen and (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  nav {
+    float: none;
+    position: relative;
+  }
+
+  nav a {
+    display: block;
+  }
+
+  .resume-columns {
+    flex-direction: column;
+  }
+
+  .right-column {
+    padding-left: 0;
+    margin-top: 20px;
+  }
 }
