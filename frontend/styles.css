@@ -7,7 +7,6 @@ body {
   padding: 0;
 }
 
-
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -138,4 +137,13 @@ footer {
   nav a {
     display: block;
   }
+}
+
+/* New styles added */
+.section-content {
+  display: none;
+}
+
+.section-content.active {
+  display: block;
 }

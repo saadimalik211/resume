@@ -19,27 +19,39 @@
       }
     }
 
-    async function loadSectionContent(targetElementId, url) {
-      try {
-        const response = await fetch(url);
-        const text = await response.text();
-        document.getElementById(targetElementId).innerHTML = text;
-      } catch (error) {
-        console.error(`Error loading ${url}:`, error);
-      }
+    function loadSectionContent(sectionId, fileName) {
+      const xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          document.getElementById(sectionId).innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open("GET", fileName, true);
+      xhr.send();
     }
 
-    document.addEventListener("DOMContentLoaded", async function () {
+    function showSection(sectionId) {
+      const sections = document.getElementsByClassName('section-content');
+      for (let i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+      }
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
       fetchVisitorCount();
       loadSectionContent("about-content", "about.html");
-      await loadSectionContent("resume-content", "resume.html");
+      loadSectionContent("resume-content", "resume.html");
       loadSectionContent("contact-content", "contact.html");
 
-      // Load Education, Experience, and Skills sections after the resume section has been loaded
-      loadSectionContent('education-section', 'education.html');
-      loadSectionContent('experience-section', 'experience.html');
-      loadSectionContent('skills-section', 'skills.html');
+      // Show the 'About' section by default
+      showSection("about-content");
     });
+
+    function navigate(event, sectionId) {
+      event.preventDefault();
+      showSection(sectionId);
+    }
   </script>
 </head>
 <body>
@@ -47,17 +59,17 @@
     <div class="container">
       <h1>Your Name</h1>
       <nav>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#resume" class="nav-link">Resume</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#about" class="nav-link" onclick="navigate(event, 'about-content')">About</a>
+        <a href="#resume" class="nav-link" onclick="navigate(event, 'resume-content')">Resume</a>
+        <a href="#contact" class="nav-link" onclick="navigate(event, 'contact-content')">Contact</a>
       </nav>      
     </div>
   </header>
 
   <div class="container content">
-    <div id="about-content"></div>
-    <div id="resume-content"></div>
-    <div id="contact-content"></div>
+    <div id="about-content" class="section-content"></div>
+    <div id="resume-content" class="section-content"></div>
+    <div id="contact-content" class="section-content"></div>
   </div>
 
   <footer>
