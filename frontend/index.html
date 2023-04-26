@@ -22,21 +22,27 @@
     }
 
     function loadSectionContent(sectionId, fileName) {
-      const xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          document.getElementById(sectionId).innerHTML = xhr.responseText;
-        }
-      };
-      xhr.open("GET", fileName, true);
-      xhr.send();
+      return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById(sectionId).innerHTML = xhr.responseText;
+            resolve();
+          }
+        };
+        xhr.onerror = function () {
+          reject(new Error(`Error loading ${fileName}`));
+        };
+        xhr.open("GET", fileName, true);
+        xhr.send();
+      });
     }
 
-    function showSection(sectionId) {
+    async function showSection(sectionId) {
       if (sectionId === "resume-content" && !resumeContentLoaded) {
-        loadSectionContent("education-section", "education.html");
-        loadSectionContent("experience-section", "experience.html");
-        loadSectionContent("skills-section", "skills.html");
+        await loadSectionContent("education-section", "education.html");
+        await loadSectionContent("experience-section", "experience.html");
+        await loadSectionContent("skills-section", "skills.html");
         resumeContentLoaded = true;
       }
 
@@ -52,11 +58,11 @@
       showSection(sectionId);
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", async function () {
       fetchVisitorCount();
-      loadSectionContent("about-content", "about.html");
-      loadSectionContent("contact-content", "contact.html");
-      loadSectionContent("resume-content", "resume.html");
+      await loadSectionContent("about-content", "about.html");
+      await loadSectionContent("contact-content", "contact.html");
+      await loadSectionContent("resume-content", "resume.html");
 
       // Show the 'Resume' section by default
       showSection("resume-content");
