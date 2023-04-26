@@ -173,12 +173,27 @@ footer {
 }
 
 .experience-job-entry {
-  width: 500px;
-  height: 400px;
   background-color: #f4f4f4;
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.experience-job-entry::before {
+  content: attr(data-company-name);
+  display: block;
+  font-weight: bold;
+}
+
+.experience-job-entry:hover::before {
+  display: none;
+}
+
+.experience-job-entry:hover::after {
+  content: attr(data-job-details);
+  display: block;
+  margin-top: 10px;
 }
 
 .skills-container {
