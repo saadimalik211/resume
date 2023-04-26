@@ -137,6 +137,10 @@ footer {
   nav a {
     display: block;
   }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* New styles added */
@@ -176,4 +180,17 @@ footer {
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 15px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.skill {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
 }
