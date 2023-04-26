@@ -170,10 +170,6 @@ footer {
     padding-left: 0;
     margin-top: 20px;
   }
-
-  .skills-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .experience-job-entry {
