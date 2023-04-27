@@ -146,7 +146,7 @@ img.profile-pic {
 }
 
 .experience-job-entry:hover::after {
-  content: "Role: " attr(data-company-role) "\A Location: " attr(data-company-location) "\A Duration: " attr(data-company-duration) "\A\A Description: " "\A" attr(data-company-description);
+  content: "Role: " attr(data-company-role) "\A Location: " attr(data-company-location) "\A Duration: " attr(data-company-duration) "\A\A Description: " "\A• " attr(data-company-description1) "\A• " attr(data-company-description2) "\A• " attr(data-company-description3) "\A• " attr(data-company-description4);
   white-space: pre;
   display: block;
   margin-top: 10px;
