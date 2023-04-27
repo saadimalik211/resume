@@ -43,7 +43,14 @@ async function showSection(sectionId) {
         });
       });
     });
-    await loadSectionContent("skills-section", "skills.html");
+    await loadSectionContent("skills-section", "skills.html", () => {
+      // Add click functionality for skill categories
+      document.querySelectorAll('.skill-category').forEach((skillCategory) => {
+        skillCategory.addEventListener('click', () => {
+          skillCategory.classList.toggle('expanded');
+        });
+      });
+    });
     resumeContentLoaded = true;
   }
 
@@ -67,11 +74,4 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // Show the 'Resume' section by default
   showSection("resume-content");
-
-  // Add click functionality for skill categories
-  document.querySelectorAll('.skill-category').forEach((skillCategory) => {
-    skillCategory.addEventListener('click', () => {
-      skillCategory.classList.toggle('expanded');
-    });
-  });
 });
