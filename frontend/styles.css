@@ -139,13 +139,10 @@ footer {
 }
 
 .experience-job-entry {
-  position: relative;
   background-color: #f4f4f4;
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 15px;
-  width: 100%;
-  max-width: 400px;
   cursor: pointer;
 }
 
@@ -163,10 +160,6 @@ footer {
   content: attr(data-job-details);
   display: block;
   margin-top: 10px;
-}
-
-.job-title {
-  font-weight: bold;
 }
 
 .skills-container {
