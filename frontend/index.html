@@ -77,27 +77,7 @@
       });
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-  const jobEntries = document.querySelectorAll('.experience-job-entry');
-
-  jobEntries.forEach((entry) => {
-    entry.addEventListener('mouseenter', function () {
-      const role = this.getAttribute('data-company-role');
-      const location = this.getAttribute('data-company-location');
-      const duration = this.getAttribute('data-company-duration');
-      const description = this.getAttribute('data-company-description');
-
-      this.classList.add('experience-job-entry-hover');
-      this.innerHTML = `Role: ${role}<br>Location: ${location}<br>Duration: ${duration}<br><br>Description:<br>${description}`;
-    });
-
-    entry.addEventListener('mouseleave', function () {
-      this.classList.remove('experience-job-entry-hover');
-      this.innerHTML = '';
-    });
-  });
-});
-
+    
   </script>
 </head>
 <body>
