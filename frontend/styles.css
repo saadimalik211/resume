@@ -20,18 +20,25 @@ header h1 {
   margin: 20px 0;
 }
 
-/* Footer */
 footer {
-  background-color: #3d3d3d;
-  color: #f4f4f4;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  text-align: center;
-  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
 footer p {
-  margin: 0 0 10px;
+  margin: 0;
+}
+
+footer a {
+  color: #007ACC;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #005999;
 }
 
 #visitorCount {

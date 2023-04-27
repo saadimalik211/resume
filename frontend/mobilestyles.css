@@ -18,6 +18,14 @@
     display: block;
   }
 
+  footer {
+    flex-direction: column;
+  }
+
+  footer p {
+    margin-bottom: 10px;
+  }
+
   .resume-columns {
     flex-direction: column;
   }
