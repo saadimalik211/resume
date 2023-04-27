@@ -162,11 +162,15 @@ footer {
   margin-top: 10px;
 }
 
-.experience-job-entry div[data-company-name]::before,
-.experience-job-entry div[data-duration]::before,
-.experience-job-entry div[data-location]::before,
-.experience-job-entry div[data-role]::before {
-  content: attr(data-company-name) attr(data-duration) attr(data-location) attr(data-role);
+.job-title {
+  font-weight: bold;
+}
+
+.job-hover-content {
+  display: none;
+}
+
+.experience-job-entry:hover .job-hover-content {
   display: block;
 }
 
