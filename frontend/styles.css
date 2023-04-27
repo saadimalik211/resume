@@ -138,29 +138,21 @@ footer {
   padding-left: 20px;
 }
 
-.experience-job-entry {
-  background-color: #f4f4f4;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 15px;
-  cursor: pointer;
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
-.experience-job-entry::before {
-  content: attr(data-company-name);
-  display: block;
-  font-weight: bold;
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
 }
 
-.experience-job-entry:hover::before {
-  display: none;
-}
-
-.experience-job-entry:hover::after {
-  content: attr(data-job-details);
-  display: block;
-  margin-top: 10px;
-}
+/* ...more existing styles... */
 
 .job-title {
   font-weight: bold;
@@ -168,6 +160,13 @@ footer {
 
 .job-hover-content {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .experience-job-entry:hover .job-hover-content {
