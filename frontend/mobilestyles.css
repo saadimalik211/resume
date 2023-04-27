@@ -1,46 +1,50 @@
 /* Mobile and Responsive Styles */
 @media only screen and (max-width: 768px) {
-    header {
-      height: auto;
-      padding: 10px;
-    }
-  
-    header h1 {
-      font-size: 32px;
-    }
-  
-    nav {
-      float: none;
-      position: relative;
-    }
-  
-    nav a {
-      display: block;
-    }
-  
-    .resume-columns {
-      flex-direction: column;
-    }
-  
-    .right-column {
-      padding-left: 0;
-    }
-
-    .about-columns {
-      flex-direction: column;
-    }
-  
-    .about-me,
-    .about-site {
-      flex-basis: 100%;
-      margin-bottom: 20px;
-    }
-
-    .experience-job-entry,
-    .skill-category,
-    .education-entry {
-      flex-basis: 100%;
-      margin-bottom: 20px;
-    }
-
+  header {
+    height: auto;
+    padding: 10px;
   }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  nav {
+    float: none;
+    position: relative;
+  }
+
+  nav a {
+    display: block;
+  }
+
+  .resume-columns {
+    flex-direction: column;
+  }
+
+  .right-column {
+    padding-left: 0;
+  }
+
+  .about-columns {
+    flex-direction: column;
+  }
+
+  .about-me,
+  .about-site {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .experience-job-entry,
+  .skill-category,
+  .education-entry {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .experience-job-entry.expanded::after {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
