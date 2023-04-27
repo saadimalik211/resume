@@ -77,6 +77,11 @@
       });
     });
 
+    document.querySelectorAll('.experience-job-entry').forEach((entry) => {
+    entry.addEventListener('click', () => {
+      entry.classList.toggle('expanded');
+    });
+  });
     
   </script>
 </head>
