@@ -54,6 +54,8 @@ nav a {
   text-decoration: none;
   padding: 0 10px;
   line-height: 80px;
+  border: 2px solid #3a21c7;
+  background-color: #afa4eb;
 }
 
 .container {
