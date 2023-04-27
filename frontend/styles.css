@@ -152,6 +152,10 @@ img.profile-pic {
   position: relative;
 }
 
+.experience-job-entry:hover {
+  background-color: #666; /* Updated hover background color */
+}
+
 .experience-job-entry::before {
   content: attr(data-company-name);
   display: block;
@@ -174,6 +178,10 @@ img.profile-pic {
   position: relative;
 }
 
+.skill-category:hover {
+  background-color: #666; /* Updated hover background color */
+}
+
 .skill-header {
   font-weight: bold;
 }
@@ -194,6 +202,10 @@ img.profile-pic {
   margin-bottom: 15px;
   cursor: pointer;
   position: relative;
+}
+
+.education-entry:hover {
+  background-color: #666; /* Updated hover background color */
 }
 
 .education-entry::before {
