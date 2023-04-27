@@ -128,6 +128,8 @@ img.profile-pic {
 
 .experience-job-entry {
   background-color: #f4f4f4;
+  width: 10%;
+  height: 15%;
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 15px;
