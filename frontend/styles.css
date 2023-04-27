@@ -169,6 +169,11 @@ img.profile-pic {
   margin-top: 10px;
 }
 
+.badges-container img {
+  width: 50%;
+  height: auto;
+}
+
 .skill-category {
   background-color: #f4f4f4;
   border-radius: 5px;
