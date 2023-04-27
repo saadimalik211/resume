@@ -142,7 +142,7 @@ img.profile-pic {
 }
 
 .experience-job-entry.expanded::after {
-  content: "\A Role: " attr(data-company-role) "\A Location: " attr(data-company-location) "\A Duration: " attr(data-company-duration) "\A\A Description: " "\A• " attr(data-company-description1) "\A• " attr(data-company-description2) "\A• " attr(data-company-description3) "\A• " attr(data-company-description4);
+  content: "\A Role: " attr(data-company-role) "\A Location: " attr(data-company-location) "\A Duration: " attr(data-company-duration) "\A\A Description: " "\A• " attr(data-company-description1) "\A• " attr(data-company-description2) "\A• " attr(data-company-description3) "\A• " attr(data-company-description4) "\A• " attr(data-company-description5) "\A• " attr(data-company-description6) "\A• " attr(data-company-description7);
   white-space: pre;
   display: block;
   margin-top: 10px;
