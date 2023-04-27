@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Resume</title>
-  <link rel="icon" href="favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="mobilestyles.css">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mobilestyles.css">
   <script>
     let resumeContentLoaded = false;
 
@@ -41,9 +41,9 @@
 
     async function showSection(sectionId) {
       if (sectionId === "resume-content" && !resumeContentLoaded) {
-        await loadSectionContent("education-section", "education.html");
-        await loadSectionContent("experience-section", "experience.html");
-        await loadSectionContent("skills-section", "skills.html");
+        await loadSectionContent("education-section", "html/education.html");
+        await loadSectionContent("experience-section", "html/experience.html");
+        await loadSectionContent("skills-section", "html/skills.html");
         resumeContentLoaded = true;
       }
 
@@ -61,9 +61,9 @@
 
     document.addEventListener("DOMContentLoaded", async function () {
       fetchVisitorCount();
-      await loadSectionContent("about-content", "about.html");
-      await loadSectionContent("contact-content", "contact.html");
-      await loadSectionContent("resume-content", "resume.html");
+      await loadSectionContent("about-content", "html/about.html");
+      await loadSectionContent("contact-content", "html/contact.html");
+      await loadSectionContent("resume-content", "html/resume.html");
 
       // Show the 'Resume' section by default
       showSection("resume-content");
