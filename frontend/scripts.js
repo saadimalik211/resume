@@ -33,33 +33,41 @@ function loadSectionContent(sectionId, fileName, callback) {
 }
 
 async function showSection(sectionId) {
-  if (sectionId === "resume-content" && !resumeContentLoaded) {
-    await loadSectionContent("education-section", "education.html");
-    await loadSectionContent("experience-section", "experience.html", () => {
-      // Add the click functionality for experience-job-entry elements
-      document.querySelectorAll('.experience-job-entry').forEach((entry) => {
-        entry.addEventListener('click', () => {
-          entry.classList.toggle('expanded');
+    if (sectionId === "resume-content" && !resumeContentLoaded) {
+      await loadSectionContent("education-section", "education.html", () => {
+        // Add click functionality for education entries
+        document.querySelectorAll('.education-entry').forEach((entry) => {
+          entry.addEventListener('click', () => {
+            entry.classList.toggle('expanded');
+          });
         });
       });
-    });
-    await loadSectionContent("skills-section", "skills.html", () => {
-      // Add click functionality for skill categories
-      document.querySelectorAll('.skill-category').forEach((skillCategory) => {
-        skillCategory.addEventListener('click', () => {
-          skillCategory.classList.toggle('expanded');
+      await loadSectionContent("experience-section", "experience.html", () => {
+        // Add the click functionality for experience-job-entry elements
+        document.querySelectorAll('.experience-job-entry').forEach((entry) => {
+          entry.addEventListener('click', () => {
+            entry.classList.toggle('expanded');
+          });
         });
       });
-    });
-    resumeContentLoaded = true;
+      await loadSectionContent("skills-section", "skills.html", () => {
+        // Add click functionality for skill categories
+        document.querySelectorAll('.skill-category').forEach((skillCategory) => {
+          skillCategory.addEventListener('click', () => {
+            skillCategory.classList.toggle('expanded');
+          });
+        });
+      });
+      resumeContentLoaded = true;
+    }
+  
+    const sections = document.getElementsByClassName('section-content');
+    for (let i = 0; i < sections.length; i++) {
+      sections[i].classList.remove('active');
+    }
+    document.getElementById(sectionId).classList.add('active');
   }
-
-  const sections = document.getElementsByClassName('section-content');
-  for (let i = 0; i < sections.length; i++) {
-    sections[i].classList.remove('active');
-  }
-  document.getElementById(sectionId).classList.add('active');
-}
+  
 
 function navigate(event, sectionId) {
   event.preventDefault();

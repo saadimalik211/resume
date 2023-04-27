@@ -155,7 +155,7 @@ img.profile-pic {
   margin-bottom: 15px;
   cursor: pointer;
   position: relative;
-  width: 48%;
+  width: 30%;
 }
 
 .skill-header {
@@ -169,4 +169,26 @@ img.profile-pic {
 
 .skill-category.expanded .skills-list {
   display: block;
+}
+
+.education-entry {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.education-entry::before {
+  content: attr(data-education-title);
+  display: block;
+  font-weight: bold;
+}
+
+.education-entry.expanded::after {
+  content: "\A " attr(data-education-details);
+  white-space: pre;
+  display: block;
+  margin-top: 10px;
 }
