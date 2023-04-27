@@ -149,23 +149,24 @@ footer {
   cursor: pointer;
 }
 
-.job-title {
+.experience-job-entry::before {
+  content: attr(data-company-name);
+  display: block;
   font-weight: bold;
 }
 
-.job-hover-content {
+.experience-job-entry:hover::before {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f4f4f4;
-  padding: 15px;
-  border-radius: 5px;
 }
 
-.experience-job-entry:hover .job-hover-content {
+.experience-job-entry:hover::after {
+  content: attr(data-job-details);
   display: block;
+  margin-top: 10px;
+}
+
+.job-title {
+  font-weight: bold;
 }
 
 .skills-container {
