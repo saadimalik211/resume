@@ -138,20 +138,26 @@ footer {
   padding-left: 20px;
 }
 
-.experience-job-entry div[data-company-name] {
+.experience-job-entry {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.experience-job-entry::before {
+  content: attr(data-company-name);
+  display: block;
   font-weight: bold;
 }
 
-.experience-job-entry:hover div[data-company-name] {
+.experience-job-entry:hover::before {
   display: none;
 }
 
-.experience-job-entry div[data-job-details] {
-  display: none;
-  white-space: pre-line;
-}
-
-.experience-job-entry:hover div[data-job-details] {
+.experience-job-entry:hover::after {
+  content: attr(data-job-details);
   display: block;
   margin-top: 10px;
 }
