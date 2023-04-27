@@ -67,11 +67,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // Show the 'Resume' section by default
   showSection("resume-content");
-});
 
-document.querySelectorAll('.skill-category').forEach((skillCategory) => {
+  // Add click functionality for skill categories
+  document.querySelectorAll('.skill-category').forEach((skillCategory) => {
     skillCategory.addEventListener('click', () => {
       skillCategory.classList.toggle('expanded');
     });
   });
-  
+});
