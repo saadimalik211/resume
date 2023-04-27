@@ -138,21 +138,16 @@ footer {
   padding-left: 20px;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
+.experience-job-entry {
+  position: relative;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+  cursor: pointer;
 }
-
-.content {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #e6e6e6;
-}
-
-/* ...more existing styles... */
 
 .job-title {
   font-weight: bold;
