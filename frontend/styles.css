@@ -153,7 +153,7 @@ img.profile-pic {
 }
 
 .experience-job-entry:hover {
-  background-color: #666; /* Updated hover background color */
+  background-color: #a3a3a3; /* Updated hover background color */
 }
 
 .experience-job-entry::before {
@@ -179,7 +179,7 @@ img.profile-pic {
 }
 
 .skill-category:hover {
-  background-color: #666; /* Updated hover background color */
+  background-color: #a3a3a3; /* Updated hover background color */
 }
 
 .skill-header {
@@ -205,7 +205,7 @@ img.profile-pic {
 }
 
 .education-entry:hover {
-  background-color: #666; /* Updated hover background color */
+  background-color: #a3a3a3; /* Updated hover background color */
 }
 
 .education-entry::before {
