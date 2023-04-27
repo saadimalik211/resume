@@ -34,16 +34,9 @@ function loadSectionContent(sectionId, fileName, callback) {
 
 async function showSection(sectionId) {
   if (sectionId === "resume-content" && !resumeContentLoaded) {
-    await loadSectionContent("education-section", "education.html", () => {
-      // Add click functionality for education entries
-      document.querySelectorAll('.education-entry').forEach((entry) => {
-        entry.addEventListener('click', () => {
-          entry.classList.toggle('expanded');
-        });
-      });
-    });
+    await loadSectionContent("education-section", "education.html");
     await loadSectionContent("experience-section", "experience.html", () => {
-      // Add click functionality for experience-job-entry elements
+      // Add the click functionality for experience-job-entry elements
       document.querySelectorAll('.experience-job-entry').forEach((entry) => {
         entry.addEventListener('click', () => {
           entry.classList.toggle('expanded');
