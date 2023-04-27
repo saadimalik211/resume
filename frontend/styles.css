@@ -22,12 +22,13 @@ header h1 {
 
 /* Footer */
 footer {
-  background-color: #202020;
+  background-color: #3d3d3d;
   padding: 30px 0;
   color: #f4f4f4;
   font-family: Arial, sans-serif;
   font-size: 14px;
   text-align: center;
+  width: 80%;
 }
 
 footer p {
