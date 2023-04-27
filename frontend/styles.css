@@ -7,17 +7,6 @@ body {
   padding: 0;
 }
 
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-}
-
-.skills-list li {
-  flex: 1 1 50%;
-}
-
 header {
   background-color: #3d3d3d;
   height: 80px;
@@ -104,7 +93,7 @@ p {
 }
 
 img.profile-pic {
-  max-width: 10%;
+  max-width: 15%;
   border-radius: 5%;
   display: block;
   margin: 0 auto 20px;
@@ -118,7 +107,6 @@ footer {
   margin-top: 20px;
 }
 
-/* New styles added */
 .section-content {
   display: none;
 }
@@ -173,6 +161,17 @@ footer {
   border-radius: 5px;
   padding: 15px;
   text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  flex: 1 1 50%;
 }
 
 /* Mobile and Responsive Styles */
