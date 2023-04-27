@@ -128,7 +128,7 @@ img.profile-pic {
 
 .experience-job-entry {
   background-color: #f4f4f4;
-  width: 10%;
+  width: 30%;
   height: 15%;
   border-radius: 5px;
   padding: 15px;
@@ -148,6 +148,8 @@ img.profile-pic {
 
 .experience-job-entry:hover::after {
   content: attr(data-job-details);
+  width: 30%;
+  height: 30%;
   display: block;
   margin-top: 10px;
 }
