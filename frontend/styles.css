@@ -126,7 +126,7 @@ img.profile-pic {
   padding-left: 20px;
 }
 
-.experience-job {
+.experience-job-entry {
   background-color: #f4f4f4;
   border-radius: 5px;
   padding: 15px;
@@ -135,12 +135,12 @@ img.profile-pic {
   position: relative;
 }
 
-.experience-job-description-list {
+.experience-job-entry-list {
   display: none;
   padding-left: 20px;
 }
 
-.experience-job.expanded .experience-job-description-list{
+.experience-job-entry.expanded .experience-job-entry-list{
   display: block;
 }
 

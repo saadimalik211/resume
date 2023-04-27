@@ -44,7 +44,7 @@ async function showSection(sectionId) {
       });
       await loadSectionContent("experience-section", "experience.html", () => {
         // Add the click functionality for experience-job-entry elements
-        document.querySelectorAll('.experience-job').forEach((entry) => {
+        document.querySelectorAll('.experience-job-entry').forEach((entry) => {
           entry.addEventListener('click', () => {
             entry.classList.toggle('expanded');
           });
