@@ -69,10 +69,9 @@
       showSection("resume-content");
 
       // Add the click functionality for experience-job-entry elements
-      const experienceJobEntries = document.querySelectorAll(".experience-job-entry");
-      experienceJobEntries.forEach((entry) => {
-        entry.addEventListener("click", function() {
-          this.classList.toggle("expanded");
+      document.querySelectorAll('.experience-job-entry').forEach((entry) => {
+        entry.addEventListener('click', () => {
+          entry.classList.toggle('expanded');
         });
       });
     });
