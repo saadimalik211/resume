@@ -37,4 +37,10 @@
       margin-bottom: 20px;
     }
 
+    .experience-job-entry,
+    .skill-category,
+    .education-entry {
+      width: 100%;
+    }
+
   }
