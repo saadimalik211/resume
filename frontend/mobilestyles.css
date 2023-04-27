@@ -31,11 +31,7 @@
   }
 
   .about-me,
-  .about-site {
-    flex-basis: 100%;
-    margin-bottom: 20px;
-  }
-
+  .about-site,
   .experience-job-entry,
   .skill-category,
   .education-entry {
@@ -46,5 +42,6 @@
   .experience-job-entry.expanded::after {
     width: 100%;
     box-sizing: border-box;
+    white-space: pre-wrap;
   }
 }
