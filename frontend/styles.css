@@ -20,12 +20,29 @@ header h1 {
   margin: 20px 0;
 }
 
+/* Footer */
 footer {
-  background-color: #3d3d3d;
-  color: #fff;
+  background-color: #202020;
+  padding: 30px 0;
+  color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
   text-align: center;
-  padding: 20px;
-  margin-top: 20px;
+}
+
+footer p {
+  margin: 0 0 10px;
+}
+
+#visitorCount {
+  font-weight: bold;
+  font-size: 16px;
+  color: #9d9d9d;
+  display: inline-block;
+  border: 1px solid #9d9d9d;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 nav {
