@@ -68,21 +68,14 @@
       // Show the 'Resume' section by default
       showSection("resume-content");
 
-      // Add the hover functionality for experience-job-entry elements
+      // Add the click functionality for experience-job-entry elements
       const experienceJobEntries = document.querySelectorAll(".experience-job-entry");
       experienceJobEntries.forEach((entry) => {
-        entry.addEventListener("touchstart", function() {
-          this.classList.toggle("show-job-details");
+        entry.addEventListener("click", function() {
+          this.classList.toggle("expanded");
         });
       });
     });
-
-    document.querySelectorAll('.experience-job-entry').forEach((entry) => {
-    entry.addEventListener('click', () => {
-      entry.classList.toggle('expanded');
-    });
-  });
-    
   </script>
 </head>
 <body>
