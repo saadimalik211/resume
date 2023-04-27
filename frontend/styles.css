@@ -162,6 +162,14 @@ footer {
   margin-top: 10px;
 }
 
+.experience-job-entry div[data-company-name]::before,
+.experience-job-entry div[data-duration]::before,
+.experience-job-entry div[data-location]::before,
+.experience-job-entry div[data-role]::before {
+  content: attr(data-company-name) attr(data-duration) attr(data-location) attr(data-role);
+  display: block;
+}
+
 .skills-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
