@@ -141,12 +141,7 @@ img.profile-pic {
   font-weight: bold;
 }
 
-.experience-job-entry:hover::before {
-  display: none;
-}
-
-.experience-job-entry:hover::after {
-  content: "Role: " attr(data-company-role) "\A Location: " attr(data-company-location) "\A Duration: " attr(data-company-duration) "\A\A Description: " "\A" attr(data-company-description);
+.experience-job-entry-hover::after {
   white-space: pre;
   display: block;
   margin-top: 10px;
