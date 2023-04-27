@@ -32,6 +32,13 @@ nav {
   float: right;
 }
 
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 80px;
+}
+
 .container {
   width: 80%;
   margin: auto;
