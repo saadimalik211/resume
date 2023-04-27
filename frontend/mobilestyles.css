@@ -39,7 +39,8 @@
     .experience-job-entry,
     .skill-category,
     .education-entry {
-      width: 100%;
+      flex-basis: 100%;
+      margin-bottom: 20px;
     }
 
   }
