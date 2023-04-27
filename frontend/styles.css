@@ -21,35 +21,28 @@ header h1 {
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-}
-
-footer p {
-  margin: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin-top: 20px;
+  border-top: 1px solid #eaeaea;
 }
 
 footer a {
-  color: #007ACC;
+  color: #333;
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 footer a:hover {
-  color: #005999;
+  text-decoration: underline;
 }
 
 #visitorCount {
-  font-weight: bold;
-  font-size: 16px;
-  color: #dfcbcb;
-  display: inline-block;
-  border: 1px solid #dfcbcb;
-  padding: 5px 10px;
+  background-color: #e0e0e0;
   border-radius: 5px;
-  margin-top: 10px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 nav {
