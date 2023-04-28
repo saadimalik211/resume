@@ -147,7 +147,8 @@ img.profile-pic {
 
 .resume-download-button {
   display: inline-block;
-  font-size: 18px;
+  padding: 1px 2px;
+  font-size: 14px;
   text-decoration: none;
   color: #ffffff;
   background-color: #007bff;
@@ -160,6 +161,7 @@ img.profile-pic {
   background-color: #0056b3;
   border-color: #0056b3;
 }
+
 
 .resume-columns {
   display: flex;
