@@ -1,0 +1,86 @@
+Name: Saad Malik
+Location: Rochester, NY
+Phone Number: 607-542-6874
+Email: saadmali@gensosekai.com
+----------------------------------------
+About:
+
+I have a decade of experience as an engineer, starting with control automation systems in factories and on trucks, and then moving into building, implementing, and maintaining software for both on-premises and cloud environments on Linux and Windows.
+Beyond my work, I am always keeping myself busy with various side projects and hobbies. 
+I enjoy tinkering with DIY repairs on my vehicles, 3d Printing projects to embed electronics, as well as configuring and running a home server with about a dozen services - including PiHole for the last 5+ years. 
+I am also passionate about staying active and being outside, whether that means backpacking in the summer or skiing in the winter.
+I love trying new recipes and cooking, and I've even set up a fun little app called Mealie on my home server to store my favorite recipes.
+----------------------------------------
+Skills
+
+Technical Skills:
+- AWS (EC2, S3, Lambda, API, DynamoDB, RDS, Cloudfront, IAM, CloudFormation, SAM, Github Actions CI/CD, etc.)
+- GCS (Storage, Logging, CloudSQL, Github Actions CI/CD)
+- On-Premise Linux/Windows System Admin
+- CI/CD
+- SQL
+- Bash/Python
+- HTML & CSS
+- C++ & Javascript
+- Git and GitActions
+- Jira & Dynamics 365
+
+Soft Skills:
+- Project Management
+- Communication
+- Collaboration
+- Troubleshooting
+- Resourcefulness
+- Documentation
+- Time Management
+- Grit
+
+----------------------------------------
+Work History:
+
+1. CognitOps
+   Implementation Engineer (Remote) | Feb 2022 - Feb 2023
+   - Conducted in-depth reviews of enterprise warehouse Oracle SQL databases to identify key data points to be integrated into CognitOps software.
+   - Collaborated with clients to develop customized workflows for their enterprise warehouse labor, identifying and addressing pain points along the way.
+   - Created highly complex SQL queries to extract and format client data as required by the CognitOps development and data science teams.
+   - Deployed CognitOps software on hybrid architectures to facilitate SQL query execution from warehouses and delivery of data to Google Cloud Services.
+   - Configured CognitOps software to establish client workflows and other settings using YAML, JSON, and Scala.
+   - Collaborated closely with the CognitOps development team to streamline implementation time frames, reducing from 12+ months to 45 days.
+   - Used Jira to track progress with Github integration for code maintenance and review.
+
+2. Rochester Software Associates
+   Technical Analyst (Remote) | Sept 2016 - Feb 2022
+   - Managed multiple new customer implementation projects, prioritizing more complex and high need customers.
+   - Monitored and responded to over 40 help desk tickets per month across multiple customers.
+   - Escalated serious issues to development, providing detailed documentation and log files.
+   - Installed and configured RSA software on Linux VMs and cloud hosting providers.
+   - Configured SSO integration with customer solutions using Shibboleth.
+   - Documented processes in MediaWiki and trained team members.
+   - Demonstrated expertise in Linux system administration, project management, RSA software, Shibboleth, and MediaWiki.
+
+3. Corning Inc
+   Control Systems Automation Engineer | Corning, NY | 2012 - 2018
+   - Designed and implemented monitoring systems for commercial truck emissions systems to collect experimental catalytic converter test data.
+   - Installed power, sensors, cabling, central processing boxes, and other required components of the monitoring system into commercial semi-trucks.
+   - Collected data from OEM and custom sensors on trucks, including GPS, speed, etc., and provided it to researchers in real-time.
+   - Created a full-size trailer version for in-depth data collection, which routed truck exhaust through the trailer and hooked up multiple instruments and servers to handle data.
+   - Constructed lab-sized exhaust monitoring systems for use with high-precision and more delicate sensors and instruments.
+   - Advocated and assisted management in transitioning from Windows PCs to dedicated embedded Linux and Windows IoT in lab and production environments.
+   - Developed a sensor monitoring and logging device using a Raspberry Pi, Arch Linux, Bash, C#, and 3D Printing as the primary technologies.
+
+4. ColoCrossing Inc
+   Datacenter Engineer | Buffalo, NY | 2014 - 2015
+   - Provided break-fix support for servers located in data centers.
+   - Diagnosed bad PSUs, RAM, or hard drives and replaced faulty parts.
+   - Assembled and racked cabinets of servers, along with running and cutting/fitting network cables.
+   - Responded to customer tickets within SLA guidelines, communicating with them to work towards resolution. Typically handled 10+ tickets per day.
+   - Prioritized, organized, and coordinated with the team on shared issues.
+   - Escalated issues to the proper department/resources as required. Typically 2-3 escalations per day.
+   - Worked with and on improving in-house custom CRM, built using CentOS, Python, and C++ as the primary technologies.
+
+----------------------------------------
+Education:
+
+A.S Computer Science
+Corning Community College - 2012
+----------------------------------------

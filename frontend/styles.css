@@ -141,6 +141,10 @@ img.profile-pic {
   display: block;
 }
 
+.resume-download-link {
+  text-align: right;
+}
+
 .resume-columns {
   display: flex;
   flex-wrap: wrap;
