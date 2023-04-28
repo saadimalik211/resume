@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobilestyles.css">
   <script>
     async function loadSectionContent(url, targetElementId) {
       try {
@@ -17,13 +18,13 @@
   </script>
 </head>
 <body>
+  <header>
+    <h1 class="section-header">Resume</h1>
+    <nav class="resume-download-link">
+      <a href="SaadMalikResume.txt" class="resume-download-button" download>Text Version Download</a>
+    </nav>
+  </header>
   <div id="resume">
-    <div class="header-container">
-      <h1 class="section-header">Resume</h1>
-      <div class="resume-download-link">
-        <a href="SaadMalikResume.txt" class="resume-download-button" download>Text Version Download</a>
-      </div>
-    </div>
     <div class="resume-columns">
       <div id="experience-section"></div>
       <div class="right-column">
