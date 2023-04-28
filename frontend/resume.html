@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <script>
     async function loadSectionContent(url, targetElementId) {
       try {
@@ -19,11 +20,25 @@
   <div id="resume">
     <div class="header-container">
       <h1 class="section-header">Resume</h1>
-      <div class="resume-download-link">
-        <a href="SaadMalikResume.txt" class="resume-download-button" download>Text Version Download</a>
+      <div class="download-link">
+        <a href="SaadMalikResume.txt" class="download-button" download>Text Version Download</a>
       </div>
     </div>
-    <!-- The rest of your HTML content -->
+    <div class="resume-columns">
+      <div id="experience-section"></div>
+      <div class="right-column">
+        <div id="skills-section"></div>
+        <div id="education-section"></div>
+      </div>
+    </div>
+    <div class="badges-container">
+      <a href="https://www.credly.com/badges/a6fd8d03-01fd-4e64-9fc3-1dc81375fca5" target="_blank">
+        <img src="cloudquest_solutionsarchitect_badge.png" alt="CloudQuest Solutions Architect Badge">
+      </a>
+      <a href="https://www.credly.com/badges/0eb1b707-b42e-4832-b2bd-1095cc6de7cc" target="_blank">
+        <img src="cloudquest_cloudpractitioner_badge.png" alt="CloudQuest Cloud Practitioner Badge">
+      </a>
+    </div>
   </div>
   <script>
     loadSectionContent('education.html', 'education-section');
