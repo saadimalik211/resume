@@ -43,6 +43,8 @@
     flex-direction: column;
   }
 
+  .resume-download-link,
+  .resume-download-button,
   .about-me,
   .about-site,
   .experience-job-entry,
