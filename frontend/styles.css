@@ -118,6 +118,14 @@ p {
   margin-top: 20px;
 }
 
+a {
+  color: #4285f4;
+  text-decoration: none;
+}
+a:hover {
+  color: #0a6de1;
+}
+
 img.profile-pic {
   max-width: 15%;
   border-radius: 5%;
