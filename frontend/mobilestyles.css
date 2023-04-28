@@ -26,6 +26,11 @@
     margin-bottom: 10px;
   }
 
+  .badges-container img {
+    width: 25%;
+    height: auto;
+  }
+
   .resume-columns {
     flex-direction: column;
   }
