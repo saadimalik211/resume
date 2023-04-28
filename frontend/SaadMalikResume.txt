@@ -2,7 +2,11 @@ Name: Saad Malik
 Location: Rochester, NY
 Phone Number: 607-542-6874
 Email: saadmali@gensosekai.com
-----------------------------------------
+LinkedIn: https://www.linkedin.com/in/saad-malik-82a832266/
+GitHub: https://github.com/saadimalik211
+Resume: https://resume.gensosekai.com
+
+--------------------------------------------------------------------------------
 About:
 
 I have a decade of experience as an engineer, starting with control automation systems in factories and on trucks, and then moving into building, implementing, and maintaining software for both on-premises and cloud environments on Linux and Windows.
@@ -26,7 +30,7 @@ This is a site built from scratch, hosted and running on AWS. The technology use
 - AWS DynamoDB for visitor count storage
 - AWS HTTP API Gateway for serverless functionality
 
-----------------------------------------
+--------------------------------------------------------------------------------
 Skills
 
 Technical Skills:
@@ -58,7 +62,7 @@ https://www.credly.com/badges/a6fd8d03-01fd-4e64-9fc3-1dc81375fca5
 CloudQuest Cloud Practitioner Badge
 https://www.credly.com/badges/0eb1b707-b42e-4832-b2bd-1095cc6de7cc
 
-----------------------------------------
+--------------------------------------------------------------------------------
 Work History:
 
 1. CognitOps
@@ -101,9 +105,9 @@ Work History:
    - Escalated issues to the proper department/resources as required. Typically 2-3 escalations per day.
    - Worked with and on improving in-house custom CRM, built using CentOS, Python, and C++ as the primary technologies.
 
-----------------------------------------
+--------------------------------------------------------------------------------
 Education:
 
 A.S Computer Science
 Corning Community College - 2012
-----------------------------------------
+--------------------------------------------------------------------------------
