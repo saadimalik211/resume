@@ -15,7 +15,7 @@ I enjoy tinkering with DIY repairs on my vehicles, 3d Printing projects to embed
 I am also passionate about staying active and being outside, whether that means backpacking in the summer or skiing in the winter.
 I love trying new recipes and cooking, and I've even set up a fun little app called Mealie on my home server to store my favorite recipes.
 
-If you are reading this, you downloaded this from resume.gensosekai.com.
+If you are reading this, you may have downloaded this from https://resume.gensosekai.com. If not, please take a look on either Desktop or Mobile.
 This is a site built from scratch, hosted and running on AWS. The technology used for this project is as follows:
 
 - HTML, CSS, and JavaScript for frontend development
@@ -39,6 +39,7 @@ Technical Skills:
 - On-Premise Linux/Windows System Admin
 - CI/CD
 - SQL
+- Docker & Terraform
 - Bash/Python
 - HTML & CSS
 - C++ & Javascript
