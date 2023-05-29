@@ -9,14 +9,13 @@ Resume: https://resume.gensosekai.com
 --------------------------------------------------------------------------------
 About:
 
-I have a decade of experience as an engineer, starting with control automation systems in factories and on trucks, and then moving into building, implementing, and maintaining software for both on-premises and cloud environments on Linux and Windows.
-Beyond my work, I am always keeping myself busy with various side projects and hobbies. 
-I enjoy tinkering with DIY repairs on my vehicles, 3d Printing projects to embed electronics, as well as configuring and running a home server with about a dozen services - including PiHole for the last 5+ years. 
-I am also passionate about staying active and being outside, whether that means backpacking in the summer or skiing in the winter.
-I love trying new recipes and cooking, and I've even set up a fun little app called Mealie on my home server to store my favorite recipes.
+I have a decade of experience as an engineer, starting with control automation systems in factories and on commercial trucks, then moving into building, implementing, and maintaining software for both on-premises and cloud environments on Linux and Windows.
+My roles have always involved a heavily technical element, while managing client expectations/requirements across multiple projects.
+Outside of work, I enjoy working on DIY repairs on my vehicles, 3d Printing projects with embedded electronics, as well as configuring and running a home server with about a dozen services - including PiHole (DHCP+DNS) and Traefik (reverse proxy) for several years. 
 
 If you are reading this, you may have downloaded this from https://resume.gensosekai.com. If not, please take a look on either Desktop or Mobile.
-This is a site built from scratch, hosted and running on AWS. The technology used for this project is as follows:
+This is a site built from scratch, hosted and running on AWS. You can view the project in git at https://github.com/saadimalik211/resume.
+The technology used for the project is as follows:
 
 - HTML, CSS, and JavaScript for frontend development
 - Python for backend development
@@ -37,13 +36,15 @@ Technical Skills:
 - AWS (EC2, S3, Lambda, API, DynamoDB, RDS, Cloudfront, IAM, CloudFormation, SAM, Github Actions CI/CD, etc.)
 - GCS (Storage, Logging, CloudSQL, Github Actions CI/CD)
 - On-Premise Linux/Windows System Admin
-- CI/CD
-- SQL
+- CI/CD (cloud based or on-premises based)
 - Docker & Terraform
-- Bash/Python
+- Vision AI (Object recognition and tracking using OpenCV / Tensorflow)
+- Django
+- Bash & Python
+- SQL
 - HTML & CSS
 - C++ & Javascript
-- Git and GitActions
+- Git & GitActions
 - Jira & Dynamics 365
 
 Soft Skills:
